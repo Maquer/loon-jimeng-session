@@ -1,0 +1,11 @@
+#!name = 即梦 Session ID 抓取
+#!desc = 自动抓取即梦 AI 创作平台的 Session ID，通过 Bark 推送通知。使用前请修改 Bark Key。
+#!author = 小蒋
+#!homepage = https://github.com/Maquer/loon-jimeng-session
+#!icon = https://www.jianying.com/favicon.ico
+
+[MITM]
+hostname = jimeng.jianying.com, *.jianying.com
+
+[Script]
+http-response ^https?://.*\.jianying\.com script-path=jimeng-session-extractor.lua, requires-body=true, timeout=300, tag=即梦Session抓取
