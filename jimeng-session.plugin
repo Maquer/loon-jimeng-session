@@ -8,4 +8,4 @@
 hostname = jimeng.jianying.com, *.jianying.com
 
 [Script]
-http-response ^https?://.*\.jianying\.com script-path=jimeng-session-extractor.lua, requires-body=true, timeout=300, tag=即梦Session抓取
+http-request ^https?://.*\.jianying\.com script-path=jimeng-session-extractor.lua, tag=即梦Session抓取
